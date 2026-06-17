@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "node-api.js"
+  ],
+  "ext": "js,mjs,cjs",
+  "ignore": [
+    "script/**"
+  ]
+}

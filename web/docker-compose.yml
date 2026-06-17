@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_BACKEND: http://15.206.194.239:5000/api/monitoring
+
+    image: monitoring_frontend
+    container_name: frontend
+
+    ports:
+      - "80:80"
+
+    depends_on:
+      - backend
+
+    restart: always
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    image: monitoring_backend
+    container_name: backend
+    volumes:
+      - /home/vinit-kumar-parmar/Desktop/project/monitoring/script:/app/monitoring
+  
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    environment:
+      PORT: 5000
+      EMAIL_USER: ${EMAIL_USER}
+      EMAIL_PASS: ${EMAIL_PASS}
+      ALERT_EMAIL: ${ALERT_EMAIL}
+      SUDO_PASSWORD: ${SUDO_PASSWORD}
+      MONITOR_PATH: ${MONITOR_PATH}
+
+    ports:
+      - "5000:5000"
+
+    restart: unless-stopped

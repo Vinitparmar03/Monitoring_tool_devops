@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "name": "monitoring",
+  "version": "1.0.0",
+  "main": "node-api.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon node-api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
