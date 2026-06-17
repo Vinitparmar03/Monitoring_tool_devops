@@ -356,9 +356,7 @@ Frontend Dashboard
 
 Add your LinkedIn project basic overview:
 
-```text
 https://www.linkedin.com/posts/vinit-kumar-parmar-22522a215_linux-devops-docker-ugcPost-7473091441485955072-7nHO/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZRDr0B3jGUgimvN4mtmvOEEJqmA9dQEvQ
-```
 
 ---
 
