@@ -17,11 +17,8 @@ cron.schedule("*/1 * * * *", async () => {
 
     try {
 
-        // await axios.post(
-        //     "http://15.206.194.239:9000/run-monitor"
-        // );
-
-        await axios.post("http://172.17.0.1:9000/run-monitor");
+        await axios.post("http://host.docker.internal:9000/run-monitor");
+        
         const filePath =
             process.env.MONITOR_PATH
                 ? `${process.env.MONITOR_PATH}/data.txt`

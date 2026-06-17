@@ -33,10 +33,9 @@ const getMonitoringData = (req, res) => {
 const refreshMonitoringData = async (req, res) => {
     try {
         //await runMonitoringScript();
-        // await axios.post(
-        //     "http://host.docker.internal:9000/run-monitor"
-        // );
-        await axios.post("http://172.17.0.1:9000/run-monitor");
+        await axios.post(
+            "http://host.docker.internal:9000/run-monitor"
+        );
 
         const data = JSON.parse(
             fs.readFileSync(jsonPath, "utf8")
